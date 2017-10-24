@@ -10,10 +10,10 @@ import { ApolloProvider, createNetworkInterface, ApolloClient } from 'react-apol
 
 // 2
 const networkInterface = createNetworkInterface({
-  uri: ' https://api.graph.cool/simple/v1/cj70d5asm0s7u0138cb30vrmk'
+  uri: '__SIMPLE_API_ENDPOINT__'
 })
 
-const wsClient = new SubscriptionClient('wss://subscriptions.graph.cool/v1/cj70d5asm0s7u0138cb30vrmk', {
+const wsClient = new SubscriptionClient('__SUBSCRIPTION_API_ENDPOINT__', {
   reconnect: true,
   connectionParams: {
      authToken: localStorage.getItem(GC_AUTH_TOKEN),
